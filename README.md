@@ -23,3 +23,10 @@ You can either run the main script via terminal command `python3 /path/to/main.p
 1. The console will ask for the class/variable name you want to add. Extra spaces are stripped <br>
 2. Pick the template to edit (non-destructively)<br>
 3. If you use build.command, the terminal window will close automatically when completed<br>
+
+# Upcoming additions
+Listed by priority:
+1. Allow for multiple variable arguments, with config.py defining multiple placeholders
+2. Give dialogue warning before closing if placeholder is not found in file
+3. Import dependencies locally
+4. Create self-contained executable
