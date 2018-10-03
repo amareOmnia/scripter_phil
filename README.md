@@ -3,9 +3,9 @@ Generates script snippets onto the OSX clipboard, from any template
 
 Python scripts ask for a variable name and template file. Simple find/replace command splices the new variable to all found placeholders. Placeholder and other options available in config.py
 
+# Installation
 Script is still reliant on a local install of Python3 and a few dependencies... though you should already have these anyways
 
-# Installation
 Required Installs:
  - Python 3.7+
     - `brew install python3`
