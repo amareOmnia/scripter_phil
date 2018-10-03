@@ -1,0 +1,7 @@
+# OSX
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+/__pycache__
+/.idea
