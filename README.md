@@ -18,7 +18,7 @@ Required Installs:
 To allow executing permissions of a single file: <code>chmod u+x /path/to/build.command</code> </p>
 
 # Usage
-You can either run the main script via terminal command `python3 /path/to/main.py` or double-click the `build.command` file
+You can either run the main script via terminal command `python3 /path/to/main.py` or double-click the `build.command` file. Results are identical.
 
 1. The console will ask for the class/variable name you want to add. Extra spaces are stripped <br>
 2. Pick the template to edit (non-destructively)<br>
