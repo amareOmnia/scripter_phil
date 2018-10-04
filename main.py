@@ -7,6 +7,7 @@ class_name = f.prompt_name()
 print('provided variables: ', class_name)
 
 # isolate different variables
+# TURN INTO SEPARATE METHOD ****
 class_vars = f.split_variables(class_name)
 quantity = len(class_vars)
 if quantity > 1:
