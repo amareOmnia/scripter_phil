@@ -1,7 +1,12 @@
 # scripter_phil
 Generates script snippets onto the OSX clipboard, from any template
 
-Python scripts ask for a variable name and template file. Simple find/replace command splices the new variable to all found placeholders. Placeholder and other options available in config.py
+<span>Python scripts ask for variable name/s and template file. 
+Simple find/replace command splices the new variable/s to all found placeholders. 
+Placeholder default and other options available in config.py. 
+Generates unlimited number of ascending placeholders, 
+based on the default name & quantity of arguments, 
+and checks the template file for them.</span>
 
 # Installation
 Script is still reliant on a local install of Python3 and a few dependencies... though you should already have these anyways
@@ -26,10 +31,11 @@ You can either run the main script via terminal command `python3 /path/to/main.p
 
 # Upcoming additions
 Listed by priority:
-1. Allow for multiple variable arguments, with config.py defining multiple placeholders
+1. <strike>Allow for multiple variable arguments, with config.py defining multiple placeholders</strike>
 2. <strike>Remove/hide Tk window during file selection</strike>
 3. allow for settings/args at beginning of templates
-4. Give dialogue warning before closing if placeholder is not found in file
+4. <strike>Give dialogue warning before closing if placeholder is not found in file</strike>
+5. turn config file into class, so placeholder can be changed if only variable is provided
 5. Make ignore_macos_warning effective
 6. Import dependencies locally
 7. Create self-contained executable

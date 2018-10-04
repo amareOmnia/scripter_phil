@@ -6,12 +6,19 @@ import sys
 
 
 def prompt_name():
-    var = input("Desired class/variable name:").strip()
+    var = input("List desired class/variable names, separated by commas (no spaces):").strip()
     return var
 
 
-def prompt_file():
+def split_variables(v):
+    print("splitting chunks")
+    var_list = v.split(",")
+    if len(var_list) == 1:
+        return v
+    return var_list
 
+
+def prompt_file():
     # request file location
     file_import = Tk()
     file_import.withdraw()
@@ -20,21 +27,29 @@ def prompt_file():
     # checks for empty file
     try:
         open(file_import.filename, 'r')
-    except (FileNotFoundError):
+    except FileNotFoundError:
         tkinter.messagebox.showinfo("Error", "File is empty/No file selected")
         sys.exit()
-
     # write file to string
     with open(file_import.filename, 'r') as t:
         template = t.read().strip()
     return template
 
 
-def replace_variable(template, var, placeholder):
-    if template.find(placeholder) == -1:
-        tkinter.messagebox.showinfo("Error", "No placeholders found")
+def replace_variable(template, variables, placeholders):
+    # if no placeholder exists in file, throw error
+    # print(placeholders)
+    if template.find(placeholders[0]) == -1:
+        tkinter.messagebox.showinfo("Error", "No placeholder found. Config and template have mismatched names")
         sys.exit()
-    output = template.replace(placeholder, var)
+
+    # replace placeholders with corresponding variables
+    index = 0
+    output = template
+    while index <= (len(placeholders)-1):
+        print('replacing...')
+        output = output.replace(placeholders[index], variables[index])
+        index += 1
     return output
 
 
