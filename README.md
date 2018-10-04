@@ -18,7 +18,7 @@ Required before use:
  - Python 3.7+
     - `brew install python3` <br> <br>
  
- <p><code>build.command</code> file is included for quick terminal usage, though permissions need to be granted for that file. <br>
+ <p><code>build.command</code> file is included for quick terminal usage, though permissions need to be granted for that file, and its directory to the python file needs to be changed (will be automated from config later on). <br>
 To allow executing permissions of a single file: <br><code>chmod u+x /path/to/build.command</code> </p>
 
 # Usage
