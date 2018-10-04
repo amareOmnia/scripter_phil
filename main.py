@@ -7,5 +7,5 @@ class_name = f.prompt_name()
 text_input = f.prompt_file()
 # replace all instances of config.placeholder with new variable
 text_output = f.replace_variable(text_input, class_name, config.get_placeholder())
-#copies to clipboard
+# copies to clipboard
 f.clipboard(text_output)

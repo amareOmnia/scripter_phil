@@ -31,6 +31,9 @@ def prompt_file():
 
 
 def replace_variable(template, var, placeholder):
+    if template.find(placeholder) == -1:
+        tkinter.messagebox.showinfo("Error", "No placeholders found")
+        sys.exit()
     output = template.replace(placeholder, var)
     return output
 

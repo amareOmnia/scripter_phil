@@ -27,7 +27,7 @@ You can either run the main script via terminal command `python3 /path/to/main.p
 # Upcoming additions
 Listed by priority:
 1. Allow for multiple variable arguments, with config.py defining multiple placeholders
-2. Remove/hide Tk window during file selection
+2. <strike>Remove/hide Tk window during file selection</strike>
 3. allow for settings/args at beginning of templates
 4. Give dialogue warning before closing if placeholder is not found in file
 5. Make ignore_macos_warning effective
