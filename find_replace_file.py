@@ -11,6 +11,7 @@ def prompt_name():
 def prompt_file():
     # request file location
     file_import = Tk()
+    file_import.withdraw()
     file_import.filename = filer.askopenfilename(initialdir="/data", title="Select template\n")
     # write file to string
     with open(file_import.filename, 'r') as t:
