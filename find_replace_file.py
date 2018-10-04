@@ -1,8 +1,11 @@
 from tkinter import filedialog as filer
 from tkinter import *
-import tkinter.messagebox
-import pyperclip
+import tkinter.messagebox as popup
+from dependencies import pyperclip
 import sys
+
+from arg_lists import ArgLists as Arg
+import config
 
 
 def prompt_name():
@@ -13,9 +16,21 @@ def prompt_name():
 def split_variables(v):
     print("splitting chunks")
     var_list = v.split(",")
-    if len(var_list) == 1:
-        return v
+    # if len(var_list) == 1:
+    #     return v
+    print(var_list)
     return var_list
+
+
+def determine_list(split_vars):
+    try:
+        split_vars.copy()
+    except AttributeError:
+        single = [split_vars]
+        print('single variable detected: ', single)
+        return single
+    plc_list = Arg(len(split_vars))
+    return plc_list
 
 
 def prompt_file():
@@ -28,7 +43,7 @@ def prompt_file():
     try:
         open(file_import.filename, 'r')
     except FileNotFoundError:
-        tkinter.messagebox.showinfo("Error", "File is empty/No file selected")
+        popup.showinfo("Error", "File is empty/No file selected")
         sys.exit()
     # write file to string
     with open(file_import.filename, 'r') as t:
@@ -40,7 +55,7 @@ def replace_variable(template, variables, placeholders):
     # if no placeholder exists in file, throw error
     # print(placeholders)
     if template.find(placeholders[0]) == -1:
-        tkinter.messagebox.showinfo("Error", "No placeholder found. Config and template have mismatched names")
+        popup.showinfo("Error", "No placeholder found. Config and template have mismatched names")
         sys.exit()
 
     # replace placeholders with corresponding variables
@@ -53,6 +68,19 @@ def replace_variable(template, variables, placeholders):
     return output
 
 
+def prompt_export():
+    root = Tk()
+    root.withdraw()
+    mount = popup.askyesno("Export to Disk",
+                           "Script saved to clipboard. Export file to Dump?")
+    root.update()
+    return mount
+
+
+def prompt_filename():
+    return input("Name the export file: ").strip(), ("." + input("File type: .").strip())
+
+
 def clipboard(output):
     pyperclip.copy(output)
-    print('Successfully processed :)')
+    print('Successfully copied!')
