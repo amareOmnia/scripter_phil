@@ -1,5 +1,5 @@
 # scripter_phil
-Generates script snippets onto the OSX clipboard, from any template
+Generates script snippets onto the OSX clipboard, from any template. Also has the option to save to file.
 
 <span>Python scripts ask for variable name/s and template file. 
 Simple find/replace command splices the new variable/s to all found placeholders. 
