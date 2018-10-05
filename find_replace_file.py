@@ -3,10 +3,7 @@ from tkinter import *
 import tkinter.messagebox as popup
 from dependencies import pyperclip
 import sys
-
 from arg_lists import ArgLists as Arg
-import config
-
 
 def prompt_name():
     var = input("List desired class/variable names, separated by commas (no spaces):").strip()
@@ -14,7 +11,7 @@ def prompt_name():
 
 
 def split_variables(v):
-    print("splitting chunks")
+    print("rendering chunk/s")
     var_list = v.split(",")
     # if len(var_list) == 1:
     #     return v

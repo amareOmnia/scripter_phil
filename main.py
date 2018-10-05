@@ -1,7 +1,10 @@
 import find_replace_file as f
 import disk_img as disk
 import time
+from config import Config
 
+settings = Config()
+settings.scan_config()
 
 # get new variable
 class_name = f.prompt_name()

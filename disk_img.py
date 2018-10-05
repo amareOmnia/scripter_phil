@@ -1,7 +1,8 @@
 import os
-import config
+from config import Config
 import subprocess
 import find_replace_file as file
+config = Config()
 
 
 def mount_disk():
