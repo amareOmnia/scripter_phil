@@ -13,9 +13,6 @@ def prompt_name():
 def split_variables(v):
     print("rendering chunk/s")
     var_list = v.split(",")
-    # if len(var_list) == 1:
-    #     return v
-    print(var_list)
     return var_list
 
 

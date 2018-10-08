@@ -3,6 +3,8 @@
 .DS_Store?
 .Spotlight-V100
 .Trashes
+.coverage
+/.vscode
 /_*
 /__pycache__
 /.idea
