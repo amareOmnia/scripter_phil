@@ -4,6 +4,7 @@
 .Spotlight-V100
 .Trashes
 .coverage
+.pylintrc
 /.vscode
 /_*
 /__pycache__

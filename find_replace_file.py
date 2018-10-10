@@ -1,18 +1,21 @@
-from tkinter import filedialog as filer
-from tkinter import *
-import tkinter.messagebox as popup
-from dependencies import pyperclip
 import sys
+import tkinter.messagebox as popup
+from tkinter import *  # pylint
+from tkinter import filedialog as filer
+
 from arg_lists import ArgLists as Arg
+from dependencies import pyperclip
+
 
 def prompt_name():
+    # asks for all potential variables
     var = input("List desired class/variable names, separated by commas (no spaces):").strip()
     return var
 
 
-def split_variables(v):
+def split_variables(var_string):
     print("rendering chunk/s")
-    var_list = v.split(",")
+    var_list = var_string.split(",")
     return var_list
 
 
