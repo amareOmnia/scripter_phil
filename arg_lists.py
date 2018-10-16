@@ -24,9 +24,6 @@ class ArgLists:
             index = str(i)
             self.arg_list.append(placeholder + index)
             i += 1
-        print(self.config.placeholder, 'list built with ', len(self.arg_list), "variables")
-        # print(self.arg_list)
-
     # counts variable quantity and returns accurate list
     # def determine_list(self, split):
 

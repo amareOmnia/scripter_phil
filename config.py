@@ -24,7 +24,6 @@ class Config:
         variables = dict()
         for z in config_lines:
             variables[z[0:z.find(" ")]] = z[(z.find(" ")+3):len(z)]
-        print(variables)
         return variables
 
     def get_placeholder(self):
