@@ -1,6 +1,6 @@
+import time
 import find_replace_file as f
 import disk_img as disk
-import time
 from config import Config
 
 settings = Config()

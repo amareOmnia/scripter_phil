@@ -34,6 +34,6 @@ Listed by priority, striked when completed:
 2. <strike>Remove/hide Tk window during file selection</strike>
 3. allow for settings/args at beginning of templates
 4. <strike>Give dialogue warning before closing if placeholder is not found in file</strike>
-5. turn config file into class, so placeholder can be changed if only variable is provided
-6. create settings.config where config class grabs text
+5. <strike>turn config file into class, so placeholder can be changed if only variable is provided</strike>
+6. <strike>create settings.config where config class grabs text</strike>
 7. Create self-contained executable

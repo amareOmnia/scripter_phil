@@ -1,7 +1,7 @@
 import sys
-import tkinter.messagebox as popup
-from tkinter import *  # pylint
+from tkinter import *
 from tkinter import filedialog as filer
+import tkinter.messagebox as popup
 
 from arg_lists import ArgLists as Arg
 from dependencies import pyperclip
