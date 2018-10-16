@@ -10,18 +10,23 @@ class Config:
 
     @staticmethod
     def scan_config():
+        # open config text file, splits the lines into list
         with open("settings.config") as s:
-            raw_settings = s.read().strip()
-            config_lines = raw_settings.splitlines()
+            config_lines = s.read().strip().splitlines()
+
+        # creates array of indexes, ready to mark which need removal
         remove_lines = []
+        # any line starting with # is removed
         for x in config_lines:
             if x.startswith("#"):
                 remove_lines.append(config_lines.index(x))
+        # removes comment lines and changes index of existing
         for y in remove_lines:
             del config_lines[int(y)]
             for q in remove_lines:
                 remove_lines[remove_lines.index(q)] = q-1
         variables = dict()
+        # 
         for z in config_lines:
             variables[z[0:z.find(" ")]] = z[(z.find(" ")+3):len(z)]
         return variables
