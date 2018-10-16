@@ -24,7 +24,6 @@ def determine_list(split_vars):
         split_vars.copy()
     except AttributeError:
         single = [split_vars]
-        print('single variable detected: ', single)
         return single
     plc_list = Arg(len(split_vars))
     return plc_list

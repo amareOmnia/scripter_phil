@@ -8,7 +8,6 @@ settings.scan_config()
 
 # get new variable
 class_name = f.prompt_name()
-print('provided variables: ', class_name)
 
 # isolate different variables
 class_vars = f.split_variables(class_name)
