@@ -7,6 +7,7 @@ class Config:
         self.placeholder = variables['placeholder_name']
         self.dmg_dir = variables['directory_for_dmg']
         self.mount_dir = variables['directory_for_diskMount']
+        self.use_args= variables['allow_file_settings']
 
     @staticmethod
     def scan_config():
@@ -16,20 +17,23 @@ class Config:
 
         # creates array of indexes, ready to mark which need removal
         remove_lines = []
-        # any line starting with # is removed
+        #
         for x in config_lines:
+        # any line starting with # is removed
             if x.startswith("#"):
                 remove_lines.append(config_lines.index(x))
-        # removes comment lines and changes index of existing
         for y in remove_lines:
+        # removes comment lines and changes index of removal line numbers
             del config_lines[int(y)]
             for q in remove_lines:
                 remove_lines[remove_lines.index(q)] = q-1
         variables = dict()
-        # 
         for z in config_lines:
             variables[z[0:z.find(" ")]] = z[(z.find(" ")+3):len(z)]
         return variables
+
+    def get_arg_usage(self):
+        return self.use_args
 
     def get_placeholder(self):
         return self.placeholder
