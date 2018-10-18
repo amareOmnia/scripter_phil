@@ -17,7 +17,7 @@ def split_variables(var_string):
     print("rendering chunk/s")
     var_list = var_string.split(",")
     return var_list
-    
+
 
 def determine_list(split_vars):
     try:
@@ -49,6 +49,7 @@ def prompt_file():
 
 def replace_variable(template, variables, placeholders):
     # if no placeholder exists in file, throw error
+    # print(placeholders)
     if template.find(placeholders[0]) == -1:
         popup.showinfo("Error", "No placeholder found. Config and template have mismatched names")
         sys.exit()
