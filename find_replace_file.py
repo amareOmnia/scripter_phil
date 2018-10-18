@@ -49,7 +49,6 @@ def prompt_file():
 
 def replace_variable(template, variables, placeholders):
     # if no placeholder exists in file, throw error
-    # print(placeholders)
     if template.find(placeholders[0]) == -1:
         popup.showinfo("Error", "No placeholder found. Config and template have mismatched names")
         sys.exit()
