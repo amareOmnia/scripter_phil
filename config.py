@@ -26,9 +26,9 @@ class Config:
             for q in remove_lines:
                 remove_lines[remove_lines.index(q)] = q-1
         variables = dict()
-        # 
+        # add each variable to dictionary
         for z in config_lines:
-            variables[z[0:z.find(" ")]] = z[(z.find(" ")+3):len(z)]
+            variables[z[0:z.find(" ")]] = (z[(z.find(" ")+3):len(z)]).strip()
         return variables
 
     def get_placeholder(self):
